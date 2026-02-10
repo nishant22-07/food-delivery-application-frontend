@@ -1,8 +1,13 @@
 import React from 'react';
+import Header from "../../components/Hader/Header.jsx";
+import ExploreMenu from "../../components/ExploreMenu/ExploreMenu.jsx";
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <main className="container">
+            <Header></Header>
+            <ExploreMenu></ExploreMenu>
+        </main>
     )
 }
 export default Home;
