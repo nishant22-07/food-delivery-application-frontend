@@ -2,8 +2,9 @@ import React from 'react';
 import Menubar from './components/Menubar/Menubar';
 import {Route, Routes} from "react-router-dom";
 import Home from "./pages/Home/Home.jsx";
-import ExploreFood from "./pages/ExploreFood/ExploreFood.jsx";
+import Explore from "./pages/ExploreFood/Explore.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
+import Header from "./components/Hader/Header.jsx";
 
 
 
@@ -13,7 +14,7 @@ const App = () => {
       <Menubar></Menubar>
         <Routes>
           <Route path="/" element={<Home/>} />
-            <Route path="/explore" element={<ExploreFood/>} />
+            <Route path="/explore" element={<Explore/>} />
             <Route path="/contact" element={<Contact/>} />
 
         </Routes>
