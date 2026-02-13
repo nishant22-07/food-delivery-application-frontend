@@ -12,6 +12,7 @@ const App = () => {
   return (
     <div>
       <Menubar></Menubar>
+
         <Routes>
           <Route path="/" element={<Home/>} />
             <Route path="/explore" element={<Explore/>} />
