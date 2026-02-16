@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import axios from "axios";
+import {fetchFoodList} from "../Service/FoodService.js";
 
 export const StoreContext = createContext(null);
 
@@ -7,18 +7,16 @@ export const StoreContextProvider = (props) => {
 
     const[foodList, setFoodList] = useState([]);
 
-    const fetchFoodList = async () => {
-        const response = await axios.get('http://localhost:8080/api/foods');
-        setFoodList(response.data);
-    }
+
 
     const contextValue = {
         foodList
     }; // You can add any state or functions you want to share across components here
 
     useEffect(() => {
-        async function loadData() {
-            await fetchFoodList();
+        async function loadData(){
+            const data = await fetchFoodList();
+            setFoodList(data);
         }
         loadData();
 
