@@ -7,8 +7,9 @@ const Home = () => {
     return (
         <main className="container">
             <Header></Header>
-            <FoodDisplay/>
+
             <ExploreMenu></ExploreMenu>
+            <FoodDisplay/>
         </main>
     )
 }
