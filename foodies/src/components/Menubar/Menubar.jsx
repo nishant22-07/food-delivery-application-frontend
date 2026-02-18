@@ -1,13 +1,24 @@
- import React from "react";
+ import React, {useContext} from "react";
 import "./Menubar.css";
 import { assets } from "../../assets/assets";
 import {Link} from "react-router-dom";
+ import {StoreContext} from "../../context/StoreContext.jsx";
 
 const Menubar = () => {
-  return (
+    const {quantities} = useContext(StoreContext);
+
+    // const totalItems = Object.values(quantities).reduce((acc, qty) => acc + qty, 0);
+
+    const uniqueItems = Object.values(quantities)
+        .filter(qty => qty> 0)
+        .length;
+
+    return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container">
-        <img src={assets.logo} alt="" className="mx-4" height={48} width={48} />
+          <Link to="/"><img src={assets.logo} alt="" className="mx-4" height={48} width={48} /></Link>
+
+
         <button
           className="navbar-toggler"
           type="button"
@@ -37,12 +48,14 @@ const Menubar = () => {
             
           </ul>
           <div className="d-flex align-items-center                  ">
-            <div className="position-relative">
+            <Link to={"/cart"} className="position-relative">
                 <img src={assets.cart} alt="" height={32} width={32}  className="position-relative"/>
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                  2
-                </span>
-             </div>
+                {uniqueItems > 0 && (
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                        {uniqueItems}
+                    </span>
+                )}
+             </Link>
              <button className="btn btn-outline-primary ms-3" type="submit">
                Login
              </button>
