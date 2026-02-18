@@ -25,7 +25,7 @@ export const assets = {
 export const categories = [
     { category: 'Biryani', icon: biryani },
     { category: 'Burger', icon: burger },
-    { category: 'Cakes', icon: cakes },
+    { category: 'Cake', icon: cakes },
     { category: 'Pizza', icon: pizza },
     { category: 'Rolls', icon: rolls },
     { category: 'Salad', icon: salad },
