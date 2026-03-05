@@ -7,6 +7,9 @@ import pizza from './pizza.png';
 import rolls from './rolls.png';
 import salad from './salad.png';
 import icecream from './icecream.png';
+import profile from './profile.png';
+import delivery from './delivery.png';
+import header from './header.jpg';
 
 
 export const assets = {
@@ -18,7 +21,10 @@ export const assets = {
     pizza,
     rolls,
     salad,
-    icecream
+    icecream,
+    profile,
+    delivery,
+    header
 
 };
 
