@@ -1,13 +1,16 @@
-import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
-import axios from "axios";
-import {fetchFoodDetails} from "../../Service/FoodService.js";
+import React, {useContext, useEffect, useState} from 'react';
+import {useNavigate, useParams} from "react-router-dom";
+import {fetchFoodDetails} from "../../Service/foodService.js";
 import {toast} from "react-toastify";
+import {StoreContext} from "../../context/StoreContext.jsx";
 
 const FoodDetails = () => {
+    const navigate = useNavigate();
+    const {increaseQty} =useContext(StoreContext);
     const {id} = useParams();
 
     const [data, setData] = useState({});
+
 
 
 
@@ -23,6 +26,14 @@ const FoodDetails = () => {
         }
         loadFoodDetails();
     }, [id]);
+
+    const addToCart = () => {
+        // Implement the logic to add the food item to the cart
+        increaseQty(data.id);
+        navigate("/cart");
+        toast.success("Food item added to cart!");
+
+    }
 
 
     return (
@@ -46,7 +57,7 @@ const FoodDetails = () => {
                             {data.description}
                         </p>
                         <div className="d-flex">
-                            <button className="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button className="btn btn-outline-dark flex-shrink-0" type="button" onClick={()=>addToCart(data.id)}>
                                 <i className="bi-cart-fill me-1"></i>
                                 Add to cart
                             </button>
