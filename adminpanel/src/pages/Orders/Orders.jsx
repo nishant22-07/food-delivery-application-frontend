@@ -26,7 +26,7 @@ const Orders = () => {
 
     try {
       const response = await axios.patch(
-          `http://localhost:8080/api/orders/status/${orderId}?status=${newStatus}`
+          `https://food-delivery-application.up.railway.app/api/orders/status/${orderId}?status=${newStatus}`
       );
 
       if (response.status === 200) {
