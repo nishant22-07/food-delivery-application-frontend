@@ -11,7 +11,7 @@ const Orders = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-          "http://localhost:8080/api/orders/all"
+          "https://food-delivery-application.up.railway.app/api/orders/all"
       );
       setData(response.data);
     } catch (error) {
