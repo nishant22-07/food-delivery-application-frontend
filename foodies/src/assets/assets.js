@@ -10,6 +10,7 @@ import icecream from './icecream.png';
 import profile from './profile.png';
 import delivery from './delivery.png';
 import header from './header.jpg';
+import background from './background.jpg';
 
 
 export const assets = {
@@ -24,7 +25,8 @@ export const assets = {
     icecream,
     profile,
     delivery,
-    header
+    header,
+    background
 
 };
 
