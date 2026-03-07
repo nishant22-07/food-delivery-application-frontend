@@ -1,0 +1,15 @@
+.login-page{
+    min-height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.card{
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.9);
+}
