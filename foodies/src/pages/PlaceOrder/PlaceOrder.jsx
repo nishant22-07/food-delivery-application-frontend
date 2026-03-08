@@ -300,7 +300,7 @@ const PlaceOrder = () => {
 
 
                             <hr className="my-4"/>
-                            <button className="w-100 btn btn-primary btn-lg" type="submit"
+                            <button className="w-100 btn btn-primary btn-lg mb-5" type="submit"
                                     disabled={cartItems.length === 0}>Continue to checkout
                             </button>
                         </form>
