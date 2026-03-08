@@ -173,6 +173,11 @@ const PlaceOrder = () => {
         }
     }
 
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text);
+        toast.success("Copied to clipboard!");
+    };
+
     return (
         <div className="container">
 
@@ -348,6 +353,61 @@ const PlaceOrder = () => {
                             </div>
 
                             <hr className="my-4"/>
+
+                            <div className="alert alert-info mt-4">
+
+                                <h6><strong>Note for Recruiters</strong></h6>
+
+                                <p>This payment gateway runs in <b>Razorpay Test Mode</b>.</p>
+
+                                <div className="mb-3">
+
+                                    <b>UPI Test IDs</b>
+
+                                    <div className="d-flex align-items-center gap-2 mt-1">
+                                        <span>razorpay@success</span>
+                                        <button
+                                            type="button"
+                                            className="btn btn-sm btn-outline-secondary"
+                                            onClick={() => copyToClipboard("razorpay@success")}
+                                        >
+                                            Copy
+                                        </button>
+                                    </div>
+
+                                    <div className="d-flex align-items-center gap-2 mt-1">
+                                        <span>razorpay@failure</span>
+                                        <button
+                                            type="button"
+                                            className="btn btn-sm btn-outline-secondary"
+                                            onClick={() => copyToClipboard("razorpay@failure")}
+                                        >
+                                            Copy
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <div>
+
+                                    <b>Card Test Details</b>
+
+                                    <div className="d-flex align-items-center gap-2 mt-1">
+                                        <span>4111 1111 1111 1111</span>
+                                        <button
+                                            type="button"
+                                            className="btn btn-sm btn-outline-secondary"
+                                            onClick={() => copyToClipboard("4111111111111111")}
+                                        >
+                                            Copy
+                                        </button>
+                                    </div>
+
+                                    <small>Expiry: Any future date | CVV: Any 3 digits | OTP: 1234</small>
+
+                                </div>
+
+                            </div>
 
                             <button
                                 className="w-100 btn btn-primary btn-lg mb-5"
