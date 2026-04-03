@@ -15,7 +15,7 @@ const MyOrders = () => {
             setLoading(true);
 
             const response = await axios.get(
-                "https://food-delivery-application.up.railway.app/api/orders",
+                "https://food-delivery-application-hgci.onrender.com/api/orders",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,

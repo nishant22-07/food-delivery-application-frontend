@@ -11,7 +11,7 @@ const Orders = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-          "https://food-delivery-application.up.railway.app/api/orders/all"
+          "https://food-delivery-application-hgci.onrender.com/api/orders/all"
       );
       setData(response.data);
     } catch (error) {
@@ -26,7 +26,7 @@ const Orders = () => {
 
     try {
       const response = await axios.patch(
-          `https://food-delivery-application.up.railway.app/api/orders/status/${orderId}?status=${newStatus}`
+          `https://food-delivery-application-hgci.onrender.com/api/orders/status/${orderId}?status=${newStatus}`
       );
 
       if (response.status === 200) {

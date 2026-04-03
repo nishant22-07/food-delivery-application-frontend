@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const  API_URL = "https://food-delivery-application.up.railway.app/api/cart"
+const  API_URL = "https://food-delivery-application-hgci.onrender.com/api/cart"
 
 export const addToCart = async (foodId,token) => {
     try{

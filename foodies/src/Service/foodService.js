@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const API_URL = 'https://food-delivery-application.up.railway.app/api/foods';
+const API_URL = 'https://food-delivery-application-hgci.onrender.com/api/foods';
 
 export const fetchFoodList = async () => {
     try{

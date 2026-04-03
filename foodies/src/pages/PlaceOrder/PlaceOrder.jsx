@@ -70,7 +70,7 @@ const PlaceOrder = () => {
 
         try {
             const response = await axios.post(
-                'https://food-delivery-application.up.railway.app/api/orders/create',
+                'https://food-delivery-application-hgci.onrender.com/api/orders/create',
                 orderData,
                 {headers: {'Authorization': `Bearer ${token}`}}
             );
@@ -131,7 +131,7 @@ const PlaceOrder = () => {
         try {
 
             const response = await axios.post(
-                'https://food-delivery-application.up.railway.app/api/orders/verify',
+                'https://food-delivery-application-hgci.onrender.com/api/orders/verify',
                 paymentData,
                 {headers: {'Authorization': `Bearer ${token}`}}
             );
@@ -153,7 +153,7 @@ const PlaceOrder = () => {
     const deleteOrder = async (orderId) => {
         try {
             await axios.delete(
-                'https://food-delivery-application.up.railway.app/api/orders/' + orderId,
+                'https://food-delivery-application-hgci.onrender.com/api/orders/' + orderId,
                 {headers: {'Authorization': `Bearer ${token}`}}
             );
         } catch (error) {
@@ -164,7 +164,7 @@ const PlaceOrder = () => {
     const clearCart = async () => {
         try {
             await axios.delete(
-                'https://food-delivery-application.up.railway.app/api/cart',
+                'https://food-delivery-application-hgci.onrender.com/api/cart',
                 {headers: {'Authorization': `Bearer ${token}`}}
             );
             setQuantities({});
